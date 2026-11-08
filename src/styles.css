@@ -1,0 +1,216 @@
+
+/* =================================
+   VANSH GUPTA — PORTFOLIO
+   GLOBAL DESIGN SYSTEM
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@500;600&display=swap');
+
+:root {
+  --background: #090909;
+  --surface: #111111;
+  --text: #f2efeb;
+  --muted: #a09c9a;
+  --accent: #e32b3c;
+  --border: rgba(242, 239, 235, 0.12);
+
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-accent: 'Caveat', cursive;
+
+  --container: 1200px;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* GLOBAL CONTAINER */
+
+.container {
+  width: min(90%, var(--container));
+  margin-inline: auto;
+}
+
+/* SECTION SPACING */
+
+section {
+  padding: 110px 0;
+  position: relative;
+}
+
+/* TYPOGRAPHY */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(4rem, 12vw, 10rem);
+}
+
+h2 {
+  font-size: clamp(3rem, 7vw, 6rem);
+}
+
+p {
+  color: var(--muted);
+}
+
+/* ACCENT TEXT */
+
+.accent {
+  color: var(--accent);
+}
+
+/* SECTION LABEL */
+
+.section-label {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 28px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* DIVIDERS */
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  width: 100%;
+}
+
+/* ANIMATIONS */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 800px) {
+  section {
+    padding: 80px 0;
+  }
+
+  .container {
+    width: 88%;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 65px 0;
+  }
+
+  h1 {
+    font-size: clamp(3.5rem, 17vw, 5.5rem);
+  }
+
+  .btn {
+    padding: 13px 20px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
