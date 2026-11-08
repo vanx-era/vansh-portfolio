@@ -2,73 +2,62 @@ import React, { useState } from "react";
 import { Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
 import { siteConfig } from "../config/site";
 
+const links = [
+  ["About", "#about"],
+  ["Expertise", "#expertise"],
+  ["Projects", "#projects"],
+  ["Journey", "#experience"],
+  ["Recognition", "#recognition"]
+];
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [motionActive, setMotionActive] = useState(false);
 
-  const navigation = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
-    { label: "Experience", href: "#experience" }
-  ];
+  const toggleMotion = () => {
+    const next = !motionActive;
+    setMotionActive(next);
+    window.dispatchEvent(new CustomEvent("swarmline:toggle", { detail: { active: next } }));
+    setMenuOpen(false);
+  };
 
   const closeMenu = () => setMenuOpen(false);
-
-  const toggleMotion = () => {
-    setMotionActive((previous) => !previous);
-    window.dispatchEvent(new Event("swarmline:toggle"));
-    closeMenu();
-  };
 
   return (
     <header className="site-header">
       <div className="header-inner container">
-
-        <a href="#home" className="logo" onClick={closeMenu}>
-          {siteConfig.identity.displayName}
-          <span>.</span>
+        <a href="#home" className="logo" onClick={closeMenu} aria-label="Vansh Gupta, home">
+          VG<span>.</span>
         </a>
 
         <button
           className="menu-toggle"
-          onClick={() => setMenuOpen(!menuOpen)}
+          type="button"
+          onClick={() => setMenuOpen((open) => !open)}
           aria-label={menuOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={menuOpen}
         >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
 
-        <nav className={menuOpen ? "navigation open" : "navigation"}>
-          {navigation.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={closeMenu}
-            >
-              {item.label}
-            </a>
+        <nav className={menuOpen ? "navigation open" : "navigation"} aria-label="Main navigation">
+          {links.map(([label, href]) => (
+            <a key={href} href={href} onClick={closeMenu}>{label}</a>
           ))}
-
           <button
             type="button"
-            className={`motion-toggle ${motionActive ? "active" : ""}`}
+            className={motionActive ? "motion-toggle active" : "motion-toggle"}
             onClick={toggleMotion}
             aria-pressed={motionActive}
+            title="Toggle the multi-cursor motion experience"
           >
-            <Sparkles size={16} />
-            Motion
+            <Sparkles size={15} />
+            {motionActive ? "Stop motion" : "Motion"}
           </button>
-
-          <a
-            href="#contact"
-            className="header-contact"
-            onClick={closeMenu}
-          >
-            Let's Connect <ArrowUpRight size={16} />
+          <a className="header-contact" href="#contact" onClick={closeMenu}>
+            Let's connect <ArrowUpRight size={15} />
           </a>
         </nav>
-
       </div>
     </header>
   );
