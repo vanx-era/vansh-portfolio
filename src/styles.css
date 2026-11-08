@@ -229,3 +229,20 @@ img, svg { display: block; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Automatically running cursor swarm and centered personal portrait */
+.swarm-canvas { position: fixed; z-index: 45; inset: 0; width: 100vw; height: 100vh; pointer-events: none; }
+.portrait-visual { isolation: isolate; }
+.portrait-glow { position: absolute; z-index: -1; width: 78%; height: 90%; bottom: -8%; border-radius: 50%; background: radial-gradient(ellipse, rgba(227,43,60,.23), rgba(227,43,60,.035) 55%, transparent 72%); filter: blur(22px); }
+.hero-portrait { position: absolute; z-index: 1; bottom: 0; left: 50%; transform: translateX(-50%); height: 88%; width: auto; max-width: 78%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 14px 35px rgba(0,0,0,.55)); }
+.portrait-caption { position: absolute; z-index: 2; left: 20px; right: 20px; bottom: 52px; display: flex; justify-content: space-between; gap: 12px; color: rgba(242,239,235,.7); font: 8px var(--mono); letter-spacing: .12em; }
+.portrait-name { color: var(--text); font-weight: 500; }
+.portrait-visual .visual-item { z-index: 3; }
+@media (max-width: 720px) {
+  .hero-portrait { height: 86%; max-width: 82%; }
+  .portrait-caption { left: 14px; right: 14px; bottom: 48px; font-size: 7px; }
+  .portrait-visual .visual-item { padding: 7px 8px; font-size: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .swarm-canvas { display: none !important; }
+}
