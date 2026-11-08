@@ -36,7 +36,7 @@ function SwarmMotion() {
       let script = document.querySelector("script[data-swarmline-engine]");
       if (!script) {
         script = document.createElement("script");
-        script.src = "/swarmline.js";
+        script.src = `${import.meta.env.BASE_URL}swarmline.js`;
         script.async = false;
         script.dataset.swarmlineEngine = "true";
         script.onload = applyState;
