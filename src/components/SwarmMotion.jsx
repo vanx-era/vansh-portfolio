@@ -29,7 +29,14 @@ function SwarmMotion() {
     };
 
     const stopEngine = () => {
-      window.__swarmline?.stop();
+      if (window.__swarmline) {
+        window.__swarmline.stop();
+      } else if (script) {
+        // If the user switches Motion off before the engine finishes loading,
+        // remove the pending script so it cannot start unexpectedly afterward.
+        script.remove();
+        script = null;
+      }
     };
 
     const handleToggle = (event) => {

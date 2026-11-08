@@ -39,7 +39,7 @@ function Hero() {
         >
           <div className="visual-topline"><span>AREAS OF INTEREST</span><span>01 / 03</span></div>
           <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-          <div className="visual-core"><img src="/images/portrait.png" alt="Portrait of Vansh Gupta" /><small>PHARMA × TECHNOLOGY</small></div>
+          <div className="visual-core"><span>VG</span><small>PHARMA × TECHNOLOGY</small></div>
           <div className="visual-item visual-item-one"><FlaskConical size={19} /><span>Drug development</span></div>
           <div className="visual-item visual-item-two"><Microscope size={19} /><span>Research & formulation</span></div>
           <div className="visual-item visual-item-three"><ChartNoAxesCombined size={19} /><span>Data & analytics</span></div>
