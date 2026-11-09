@@ -6,8 +6,8 @@ export const siteConfig = {
     roleLine2: "Pharmaceutical Research & Development",
     location: "Mumbai, Maharashtra, India",
     availability: "OPEN TO PROFESSIONAL CONNECTIONS",
-    intro: "Exploring pharmaceutical research, drug development and the role of technology in better healthcare.",
-    about: "I am a final-year Bachelor of Pharmacy student at Gahlot Institute of Pharmacy, University of Mumbai. My interests centre on pharmaceutical research and development, formulation science, drug delivery and data-informed approaches to healthcare innovation.",
+    intro: "Exploring pharmaceutical research, drug development and the role of technology in better healthcare",
+    about: "I am a final-year Bachelor of Pharmacy student at Gahlot Institute of Pharmacy, University of Mumbai. My interests centre on pharmaceutical research and development, formulation science, drug delivery and data-informed approaches to healthcare innovation",
     portrait: "",
     resume: ""
   },
