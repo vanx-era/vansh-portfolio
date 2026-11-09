@@ -234,3 +234,60 @@
  .project-meta,.timeline-meta,.contact-column-label,.contact-link-row small,
  .contact-aside-index,.contact-aside-bottom,.tag-list span,.project-role{font-size:11px}
 }
+
+
+/* Final targeted corrections: keep the complete portrait visible and fit contact details */
+.hero-stage{position:relative;min-height:640px}
+.hero-portrait-center{
+  position:absolute;
+  left:50%;
+  top:50%;
+  bottom:auto;
+  display:block;
+  height:min(82vh,540px);
+  width:auto;
+  max-width:48%;
+  max-height:calc(100% - 36px);
+  transform:translate(-50%,-50%);
+  object-fit:contain;
+  object-position:center center;
+}
+.contact-editorial-heading h2{
+  font-size:clamp(3.2rem,6.7vw,7rem);
+  line-height:.9;
+}
+.contact-editorial-grid{
+  grid-template-columns:minmax(0,.95fr) minmax(350px,1.2fr) minmax(180px,.65fr);
+  gap:clamp(20px,3vw,42px);
+}
+.contact-link-row{gap:10px;min-width:0}
+.contact-link-row>span:nth-child(2){min-width:0}
+.contact-link-row strong{
+  white-space:nowrap;
+  overflow-wrap:normal;
+  font-size:12px;
+  letter-spacing:-.02em;
+}
+.contact-link-icon{flex-basis:32px;width:32px;height:32px}
+.contact-link-row>svg{flex:0 0 13px;width:13px;height:13px}
+@media(max-width:980px){
+ .hero-portrait-center{height:min(76vh,500px);max-width:54%}
+ .contact-editorial-grid{grid-template-columns:minmax(0,1fr) minmax(320px,1.1fr)}
+ .contact-aside{grid-column:1/-1}
+}
+@media(max-width:720px){
+ .hero-portrait-center{
+   position:relative;
+   left:auto;top:auto;bottom:auto;
+   height:auto;
+   width:min(82%,390px);
+   max-width:82%;
+   max-height:470px;
+   transform:none;
+   margin:0 auto;
+   object-fit:contain;
+ }
+ .contact-editorial-grid{grid-template-columns:minmax(0,1fr);gap:32px}
+ .contact-editorial-heading h2{font-size:clamp(3.3rem,14vw,5.2rem)}
+ .contact-link-row strong{font-size:12px}
+}
