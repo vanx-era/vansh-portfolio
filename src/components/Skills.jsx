@@ -36,7 +36,7 @@ function Skills() {
   return (
     <section id="expertise" className="section expertise-section">
       <div className="container">
-        <div className="section-topline"><span>02 / EXPERTISE</span><span>SCIENCE · SYSTEMS · COMMUNICATION</span></div>
+        <div className="section-topline"><span>03 / EXPERTISE</span><span>SCIENCE · SYSTEMS · COMMUNICATION</span></div>
         <div className="section-heading split-heading">
           <div><p className="section-label">WHAT I BRING</p><h2>Knowledge in<br /><em>practice.</em></h2></div>
           <p className="section-description">A growing skill set across pharmaceutical sciences, research methods, data tools and professional communication.</p>
