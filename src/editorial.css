@@ -291,3 +291,18 @@
  .contact-editorial-heading h2{font-size:clamp(3.3rem,14vw,5.2rem)}
  .contact-link-row strong{font-size:12px}
 }
+
+
+/* Contact section spacing: keep FIND ME HERE clear of CONNECT */
+.contact-editorial-grid{
+  grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(180px,.72fr);
+  gap:clamp(18px,2.5vw,36px);
+}
+.contact-link-column{padding-top:0}
+.contact-column-label{margin-bottom:12px}
+@media(max-width:980px){
+  .contact-editorial-grid{grid-template-columns:minmax(0,1fr) minmax(320px,1.1fr);gap:28px}
+}
+@media(max-width:720px){
+  .contact-editorial-grid{grid-template-columns:minmax(0,1fr);gap:32px}
+}
