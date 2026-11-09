@@ -9,8 +9,8 @@ function Experience() {
       <div className="container">
         <div className="section-topline"><span>04 / THE JOURNEY</span><span>EXPERIENCE & EXPOSURE</span></div>
         <div className="section-heading split-heading">
-          <div><p className="section-label">LEARNING BY DOING</p><h2>Beyond the<br /><em>classroom.</em></h2></div>
-          <p className="section-description">Experiences that have helped me connect academic knowledge with communication, collaboration and the pharmaceutical industry.</p>
+          <div><p className="section-label">LEARNING BY DOING</p><h2>Beyond the<br /><em>classroom</em></h2></div>
+          <p className="section-description">Experiences that have helped me connect academic knowledge with communication, collaboration and the pharmaceutical industry</p>
         </div>
         <div className="timeline">
           {experience.map((item, index) => (
