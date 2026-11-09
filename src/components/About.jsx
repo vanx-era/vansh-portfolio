@@ -13,12 +13,12 @@ function About() {
         <div className="about-layout">
           <div className="section-heading">
             <p className="section-label">A LITTLE INTRODUCTION</p>
-            <h2>Curiosity<br />drives <em>progress.</em></h2>
+            <h2>Curiosity<br />drives <em>progress</em></h2>
           </div>
           <div className="about-copy">
             <p className="about-lead">{identity.about}</p>
-            <p>My academic foundation spans medicinal chemistry, pharmacology, biopharmaceutics and pharmacokinetics, pharmaceutical analysis and industrial pharmacy. I am interested in connecting this scientific base with quality-by-design thinking, analytical development and computational tools.</p>
-            <p>Beyond the classroom, medical writing, academic coordination, industry exposure and collaborative projects continue to shape how I approach problems and communicate ideas.</p>
+            <p>My academic foundation spans medicinal chemistry, pharmacology, biopharmaceutics and pharmacokinetics, pharmaceutical analysis and industrial pharmacy. I am interested in connecting this scientific base with quality-by-design thinking, analytical development and computational tools</p>
+            <p>Beyond the classroom, medical writing, academic coordination, industry exposure and collaborative projects continue to shape how I approach problems and communicate ideas</p>
             <a className="inline-link" href="#contact">Start a conversation <ArrowUpRight size={16} /></a>
           </div>
         </div>

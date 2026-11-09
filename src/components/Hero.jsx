@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, FlaskConical, Microscope, ChartNoAxesCombined } from "lucide-react";
+import { ArrowDown, FlaskConical, Microscope, ChartNoAxesCombined } from "lucide-react";
 import { siteConfig } from "../config/site";
 
 const portrait = "https://raw.githubusercontent.com/vanx-era/vansh-portfolio/23ed8aea2ee09a2a17fe72e93aba30eb65055464/Bg%20Remove.png";
@@ -8,35 +8,32 @@ const portrait = "https://raw.githubusercontent.com/vanx-era/vansh-portfolio/23e
 function Hero() {
   const { identity } = siteConfig;
   return (
-    <section className="hero" id="home">
-      <div className="hero-grid container">
-        <motion.div className="hero-copy" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, ease: "easeOut" }}>
-          <div className="eyebrow"><span className="status-dot" /> {identity.availability}</div>
-          <p className="hero-kicker">PORTFOLIO / 2026—27</p>
-          <h1>SCIENCE<br />WITH A<br /><span>NEW</span> PERSPECTIVE<span className="hero-period">.</span></h1>
-          <div className="hero-bottom">
-            <div>
-              <p className="hero-role">{identity.profession} <span>— {identity.location}</span></p>
-              <p className="hero-intro">{identity.intro}</p>
-            </div>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#projects">Explore my work <ArrowUpRight size={17} /></a>
-              <a className="text-link" href="#about">Discover my approach <ArrowDown size={15} /></a>
-            </div>
-          </div>
-        </motion.div>
-        <motion.aside className="hero-visual portrait-visual" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.15 }} aria-label="Portrait of Vansh Gupta and areas of interest">
-          <div className="visual-topline"><span>PHARMACY × TECHNOLOGY</span><span>01 / 03</span></div>
-          <div className="portrait-glow" />
-          <img className="hero-portrait" src={portrait} alt="Vansh Gupta" fetchPriority="high" />
-          <div className="portrait-caption"><span className="portrait-name">VANSH GUPTA</span><span>PHARMACEUTICAL SCIENCES</span></div>
-          <div className="visual-item visual-item-one"><FlaskConical size={17} /><span>Drug development</span></div>
-          <div className="visual-item visual-item-two"><Microscope size={17} /><span>Research & formulation</span></div>
-          <div className="visual-item visual-item-three"><ChartNoAxesCombined size={17} /><span>Data & analytics</span></div>
-          <div className="visual-foot"><span>CURIOUS BY DESIGN</span><span>MUMBAI, INDIA</span></div>
-        </motion.aside>
+    <section className="hero hero-editorial" id="home">
+      <div className="container hero-editorial-inner">
+        <div className="hero-meta-row">
+          <div><span className="hero-red-label">PHARMACEUTICAL SCIENCES</span><span className="hero-meta-sub">RESEARCH · DEVELOPMENT · TECHNOLOGY</span></div>
+          <div className="hero-availability"><span className="status-dot" />{identity.availability}</div>
+        </div>
+        <div className="hero-stage">
+          <div className="hero-name-backdrop" aria-hidden="true">PORTFOLIO</div>
+          <img className="hero-portrait hero-portrait-center" src={portrait} alt="Portrait of Vansh Gupta" fetchPriority="high" />
+          <motion.div className="hero-editorial-copy" initial={{opacity:0,x:-24}} animate={{opacity:1,x:0}} transition={{duration:0.7,delay:0.15}}>
+            <p className="hero-script">Hello, I'm</p>
+            <h1>VANSH<br/>GUPTA</h1>
+            <p className="hero-role-editorial">B.PHARM STUDENT<br/><strong>PHARMACEUTICAL R&D</strong></p>
+            <p className="hero-intro-editorial">{identity.intro}</p>
+            <a className="button button-primary" href="#projects">Explore my work <ArrowDown size={16}/></a>
+            <p className="hero-location">⌖ &nbsp; MUMBAI, INDIA</p>
+          </motion.div>
+          <motion.aside className="hero-side-notes" initial={{opacity:0,x:20}} animate={{opacity:1,x:0}} transition={{duration:0.7,delay:0.3}}>
+            <div className="hero-purpose"><span className="hero-star">✳</span><p>Curiosity meets<br/>purpose.</p></div>
+            <div className="hero-focus"><FlaskConical/><span>Drug development</span></div>
+            <div className="hero-focus"><Microscope/><span>Research & formulation</span></div>
+            <div className="hero-focus"><ChartNoAxesCombined/><span>Data & analytics</span></div>
+          </motion.aside>
+        </div>
+        <div className="hero-bottomline"><span>INDEPENDENT THINKING. EVIDENCE-LED WORK.</span><a href="#projects">SCROLL TO EXPLORE <ArrowDown size={14}/></a><span>PORTFOLIO / 2026—27</span></div>
       </div>
-      <a href="#about" className="scroll-cue container"><span>SCROLL TO EXPLORE</span><ArrowDown size={15} /></a>
     </section>
   );
 }

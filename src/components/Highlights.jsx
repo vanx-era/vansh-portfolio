@@ -5,17 +5,17 @@ const highlights = [
   {
     icon: Award,
     title: "Student leadership",
-    detail: "Discipline Committee Member and Assistant Discipline Secretary, recognised with institutional trophies."
+    detail: "Discipline Committee Member and Assistant Discipline Secretary, recognised with institutional trophies"
   },
   {
     icon: HeartHandshake,
     title: "Community engagement",
-    detail: "Volunteer participation in PHO activities, health-check-up initiatives, blood-donation drives and community outreach."
+    detail: "Volunteer participation in PHO activities, health-check-up initiatives, blood-donation drives and community outreach"
   },
   {
     icon: Users,
     title: "Coordination & teamwork",
-    detail: "Class Representative and student coordination experience, including working with peers and academic coordinators."
+    detail: "Class Representative and student coordination experience, including working with peers and academic coordinators"
   }
 ];
 
@@ -25,8 +25,8 @@ function Highlights() {
       <div className="container">
         <div className="section-topline"><span>05 / RECOGNITION</span><span>LEADERSHIP · SERVICE · INITIATIVE</span></div>
         <div className="section-heading split-heading">
-          <div><p className="section-label">MORE THAN ACADEMICS</p><h2>People.<br /><em>Purpose.</em></h2></div>
-          <p className="section-description">I value the opportunities to take responsibility, contribute to a team and participate in initiatives beyond my academic coursework.</p>
+          <div><p className="section-label">MORE THAN ACADEMICS</p><h2>People<br /><em>Purpose</em></h2></div>
+          <p className="section-description">I value the opportunities to take responsibility, contribute to a team and participate in initiatives beyond my academic coursework</p>
         </div>
         <div className="recognition-grid">
           {highlights.map(({ icon: Icon, title, detail }, index) => (
