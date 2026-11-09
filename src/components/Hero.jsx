@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, FlaskConical, Microscope, ChartNoAxesCombined } from "lucide-react";
+import { ArrowDown, FlaskConical, Microscope, ChartNoAxesCombined } from "lucide-react";
 import { siteConfig } from "../config/site";
 
 const portrait = "https://raw.githubusercontent.com/vanx-era/vansh-portfolio/23ed8aea2ee09a2a17fe72e93aba30eb65055464/Bg%20Remove.png";
@@ -15,7 +15,7 @@ function Hero() {
           <div className="hero-availability"><span className="status-dot" />{identity.availability}</div>
         </div>
         <div className="hero-stage">
-          <div className="hero-name-backdrop" aria-hidden="true">VANSH</div>
+          <div className="hero-name-backdrop" aria-hidden="true">PORTFOLIO</div>
           <motion.img className="hero-portrait hero-portrait-center" src={portrait} alt="Portrait of Vansh Gupta" fetchPriority="high" initial={{opacity:0,y:28}} animate={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} />
           <motion.div className="hero-editorial-copy" initial={{opacity:0,x:-24}} animate={{opacity:1,x:0}} transition={{duration:0.7,delay:0.15}}>
             <p className="hero-script">Hello, I'm</p>
