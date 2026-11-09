@@ -328,3 +328,34 @@
 @media(max-width:420px){
   .hero-name-backdrop{font-size:clamp(2.55rem,12.8vw,4.2rem);letter-spacing:-.085em}
 }
+
+
+/* Requested typography adjustments only */
+@media(min-width:721px){
+  .header-inner>.navigation a{
+    font-size:14px;
+  }
+}
+/* Reduce only the named section headings by approximately 1rem */
+#contact .contact-editorial-heading h2{
+  font-size:calc(clamp(3.2rem,6.7vw,7rem) - 1rem);
+}
+#recognition .section-heading h2,
+#experience .section-heading h2,
+#expertise .section-heading h2,
+#projects .section-heading h2,
+#about .section-heading h2{
+  font-size:calc(clamp(3rem,6.5vw,6.4rem) - 1rem);
+}
+@media(max-width:720px){
+  #contact .contact-editorial-heading h2{
+    font-size:calc(clamp(3.3rem,14vw,5.2rem) - 1rem);
+  }
+  #recognition .section-heading h2,
+  #experience .section-heading h2,
+  #expertise .section-heading h2,
+  #projects .section-heading h2,
+  #about .section-heading h2{
+    font-size:calc(clamp(3rem,10vw,5rem) - 1rem);
+  }
+}
