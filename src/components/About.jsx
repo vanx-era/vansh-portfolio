@@ -9,7 +9,7 @@ function About() {
   return (
     <section id="about" className="section about-section">
       <div className="container">
-        <div className="section-topline"><span>03 / ABOUT</span><span>THE PERSON BEHIND THE WORK</span></div>
+        <div className="section-topline"><span>01 / ABOUT</span><span>THE PERSON BEHIND THE WORK</span></div>
         <div className="about-layout">
           <div className="section-heading">
             <p className="section-label">A LITTLE INTRODUCTION</p>
