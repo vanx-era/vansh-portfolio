@@ -19,7 +19,7 @@ function Hero() {
           <motion.img className="hero-portrait hero-portrait-center" src={portrait} alt="Portrait of Vansh Gupta" fetchPriority="high" initial={{opacity:0,y:28}} animate={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} />
           <motion.div className="hero-editorial-copy" initial={{opacity:0,x:-24}} animate={{opacity:1,x:0}} transition={{duration:0.7,delay:0.15}}>
             <p className="hero-script">Hello, I'm</p>
-            <h1>VANSH<br/>GUPTA<span>.</span></h1>
+            <h1>VANSH<br/>GUPTA</h1>
             <p className="hero-role-editorial">B.PHARM STUDENT<br/><strong>PHARMACEUTICAL R&D</strong></p>
             <p className="hero-intro-editorial">{identity.intro}</p>
             <a className="button button-primary" href="#projects">Explore my work <ArrowDown size={16}/></a>
