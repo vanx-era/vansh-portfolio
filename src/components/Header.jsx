@@ -21,7 +21,7 @@ function Header() {
   return (
     <header className="site-header">
       <div className="header-inner container">
-        <a href="#home" className="logo" onClick={closeMenu} aria-label="Vansh Gupta, home">VG<span>.</span></a>
+        <a href="#home" className="logo" onClick={closeMenu} aria-label="VANX, home">VANX<span>.</span></a>
         <button className="menu-toggle" type="button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen}>{menuOpen ? <X size={22}/> : <Menu size={22}/>}</button>
         <nav className={menuOpen ? "navigation open" : "navigation"} aria-label="Main navigation">
           {links.map(([label, href]) => <a key={href} href={href} onClick={closeMenu}>{label}</a>)}
