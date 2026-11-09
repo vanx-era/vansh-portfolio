@@ -25,7 +25,7 @@ function Highlights() {
       <div className="container">
         <div className="section-topline"><span>05 / RECOGNITION</span><span>LEADERSHIP · SERVICE · INITIATIVE</span></div>
         <div className="section-heading split-heading">
-          <div><p className="section-label">MORE THAN ACADEMICS</p><h2>People.<br /><em>Purpose</em></h2></div>
+          <div><p className="section-label">MORE THAN ACADEMICS</p><h2>People<br /><em>Purpose</em></h2></div>
           <p className="section-description">I value the opportunities to take responsibility, contribute to a team and participate in initiatives beyond my academic coursework</p>
         </div>
         <div className="recognition-grid">
