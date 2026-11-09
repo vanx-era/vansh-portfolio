@@ -25,9 +25,11 @@ function Header() {
         <button className="menu-toggle" type="button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen}>{menuOpen ? <X size={22}/> : <Menu size={22}/>}</button>
         <nav className={menuOpen ? "navigation open" : "navigation"} aria-label="Main navigation">
           {links.map(([label, href]) => <a key={href} href={href} onClick={closeMenu}>{label}</a>)}
+        </nav>
+        <div className="header-actions">
           <button type="button" className={motionActive ? "motion-toggle active" : "motion-toggle"} onClick={toggleMotion} aria-pressed={motionActive} title="Toggle the multi-cursor motion experience"><Sparkles size={15}/>{motionActive ? "Motion on" : "Motion off"}</button>
           <a className="header-contact" href="#contact" onClick={closeMenu}>Let's talk <ArrowUpRight size={15}/></a>
-        </nav>
+        </div>
       </div>
     </header>
   );
