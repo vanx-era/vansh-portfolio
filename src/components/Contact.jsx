@@ -18,8 +18,8 @@ function Contact() {
         <div className="contact-editorial-grid">
           <div className="contact-editorial-heading">
             <p className="section-label">HAVE A QUESTION, IDEA OR OPPORTUNITY?</p>
-            <h2>LET'S<br/><em>CONNECT.</em></h2>
-            <p className="contact-intro">Good work begins with a conversation. I'm keen to connect with people across pharmaceutical sciences, research, drug development and healthcare innovation.</p>
+            <h2>LET'S<br/><em>CONNECT</em></h2>
+            <p className="contact-intro">Good work begins with a conversation. I'm keen to connect with people across pharmaceutical sciences, research, drug development and healthcare innovation</p>
             <a className="contact-mail-link" href={contact.whatsapp} target="_blank" rel="noreferrer">Message me on WhatsApp <ArrowUpRight size={17}/></a>
           </div>
           <div className="contact-link-column">
@@ -30,8 +30,8 @@ function Contact() {
           <aside className="contact-aside">
             <span className="contact-aside-index">VANX. / 2026—27</span>
             <div className="contact-aside-mark">VANX<span>.</span></div>
-            <p>Pharmaceutical sciences.<br/>A curious mind.<br/>A research-led approach.</p>
-            <span className="contact-aside-bottom">LET'S BUILD BETTER IDEAS.</span>
+            <p>Pharmaceutical sciences.<br/>A curious mind.<br/>A research-led approach</p>
+            <span className="contact-aside-bottom">LET'S BUILD BETTER IDEAS</span>
           </aside>
         </div>
       </div>
