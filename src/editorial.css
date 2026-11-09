@@ -173,3 +173,64 @@
  .about-copy .about-lead{font-size:18px}
  .contact-link-row strong{font-size:15px}
 }
+
+
+/* Requested-only fixes: readable small text and centred, contained hero portrait */
+.hero-stage{min-height:640px;overflow:visible}
+.hero-portrait-center{
+  position:absolute;
+  left:50%;
+  top:50%;
+  bottom:auto;
+  height:100%;
+  width:auto;
+  max-width:58%;
+  max-height:100%;
+  transform:translate(-50%,-50%);
+  object-fit:contain;
+  object-position:center center;
+}
+.hero-editorial-copy,.hero-side-notes{position:relative;z-index:2}
+.hero-name-backdrop{z-index:0}
+.hero-meta-sub,.hero-availability,.hero-red-label,.hero-role-editorial,
+.hero-location,.hero-bottomline,.section-topline,.section-label,.micro-label,
+.project-meta,.timeline-meta,.contact-column-label,.contact-link-row small,
+.contact-aside-index,.contact-aside-bottom,.tag-list span,.project-role{
+  font-size:12px;
+}
+.hero-intro-editorial,.hero-purpose,.hero-focus,.contact-intro,
+.contact-link-row strong,.about-copy p,.section-description,
+.expertise-card>p,.project-description,.timeline-description,
+.recognition-card p,.project-summary,.timeline-body ul{
+  font-size:16px;
+  line-height:1.85;
+}
+@media(max-width:980px){
+ .hero-stage{min-height:590px}
+ .hero-portrait-center{height:94%;max-width:60%}
+}
+@media(max-width:720px){
+ .hero-stage{position:relative;display:flex;flex-direction:column;align-items:stretch;min-height:0;overflow:visible}
+ .hero-portrait-center{
+   position:relative;
+   left:auto;top:auto;bottom:auto;
+   order:1;align-self:center;
+   transform:none;
+   display:block;
+   width:min(82%,390px);
+   height:auto;
+   max-width:82%;
+   max-height:470px;
+   margin:0 auto 0;
+   object-fit:contain;
+ }
+ .hero-name-backdrop{top:34%;z-index:0}
+ .hero-editorial-copy,.hero-side-notes{position:relative;z-index:2}
+ .hero-intro-editorial,.contact-intro,.about-copy p,.section-description,
+ .expertise-card>p,.project-description,.timeline-description,
+ .recognition-card p,.project-summary,.timeline-body ul{font-size:15px}
+ .hero-meta-sub,.hero-availability,.hero-red-label,.hero-role-editorial,
+ .hero-location,.hero-bottomline,.section-topline,.section-label,.micro-label,
+ .project-meta,.timeline-meta,.contact-column-label,.contact-link-row small,
+ .contact-aside-index,.contact-aside-bottom,.tag-list span,.project-role{font-size:11px}
+}
