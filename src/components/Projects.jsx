@@ -6,7 +6,7 @@ function Projects() {
   return (
     <section id="projects" className="section projects-section">
       <div className="container">
-        <div className="section-topline"><span>03 / SELECTED WORK</span><span>RESEARCH & PROJECTS</span></div>
+        <div className="section-topline"><span>01 / SELECTED WORK</span><span>RESEARCH & PROJECTS</span></div>
         <div className="section-heading split-heading">
           <div><p className="section-label">IN PROGRESS & COMPLETED</p><h2>Ideas into<br /><em>action.</em></h2></div>
           <p className="section-description">A selection of academic research and interdisciplinary work. Ongoing work is clearly identified as it develops.</p>
